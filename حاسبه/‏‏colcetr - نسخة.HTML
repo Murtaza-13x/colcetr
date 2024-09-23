@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    
+    <style>
+        body{
+            background-color: rgb(0, 200, 255);
+
+        }
+        #C{
+
+            position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%,-50%);
+
+           align-items: center;
+            text-align: center;
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+            background-color: aquamarine;
+            border: 3px solid green;
+        }
+        #texrNum{
+            transform: translate(0%,20%);
+
+            height: 50px;
+            width: 400px;
+            font-size: 30px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(133, 220, 139);
+            cursor: not-allowed;
+            
+
+
+        }
+        .Num{
+            color: rgb(0, 136, 255);
+            background-color: rgb(169, 220, 133);
+            height: 80px;
+            width: 100px;
+            font-size: 50px;
+            cursor: pointer;
+
+        }
+        .Num:hover{
+            color: rgb(63, 69, 75);
+            background-color: rgb(220, 155, 133);
+            height: 80px;
+            width: 100px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="C">
+        <input type="text" id="texrNum" value="">
+        <br>
+        <br>
+        <input type="button" value="1" class="Num" id="Num1" onclick="add1()">
+        <input type="button" value="2" class="Num" id="Num2" onclick="add2()">
+        <input type="button" value="3" class="Num" id="Num3" name="3" onclick="add3()">
+        <input type="button" value="+" class="Num" id="Sum"  onclick="addSum()">
+        <br>
+        <br>
+        <input type="button" value="4" class="Num" id="Num4"onclick="add4()">
+        <input type="button" value="5" class="Num" id="Num5"onclick="add5()">
+        <input type="button" value="6" class="Num" id="Num6"onclick="add6()">
+        <input type="button" value="-" class="Num" id="Mun"  onclick="addMun()">
+        <br>
+        <br>
+        <input type="button" value="7" class="Num" id="Num7"onclick="add7()">
+        <input type="button" value="8" class="Num" id="Num8"onclick="add8()">
+        <input type="button" value="9" class="Num" id="Num9"onclick="add9()">
+        <input type="button" value="X" class="Num" id="mul"  onclick="addmul()">
+
+        <br>
+        <br>
+        <input type="button" value="." class="Num" id="Num."onclick="addpont()">
+        <input type="button" value="0" class="Num" id="Num9"onclick="add0()">
+        <input type="button" value="=" class="Num" onclick="Eq()">
+        <input type="button" value="/" class="Num" id="Div"  onclick="addDiv()">
+
+
+
+
+    </div>
+     <script>
+        var textNum = document.getElementById("texrNum");
+        var Num = document.getElementsByClassName("Num");
+        textNum.disabled = true;
+        //Num
+        function add1()
+        {  
+            document.getElementById("Sum").disabled = false;
+            document.getElementById("Mun").disabled = false;
+            document.getElementById("mul").disabled = false;
+            document.getElementById("Div").disabled = false;                               
+            textNum.value = textNum.value +  "1"; 
+
+        }
+        function add2()
+        {
+            document.getElementById("Sum").disabled = false;
+            document.getElementById("Mun").disabled = false;
+            document.getElementById("mul").disabled = false;
+            document.getElementById("Div").disabled = false;                                          
+            textNum.value = textNum.value +"2";                
+        }
+        function add3()
+        {   
+           document.getElementById("Sum").disabled = false;
+           document.getElementById("Mun").disabled = false; 
+           document.getElementById("mul").disabled = false;
+           document.getElementById("Div").disabled = false;                                   
+           textNum.value = textNum.value +"3";                
+        }
+        function add4()
+        {           
+            document.getElementById("Sum").disabled = false; 
+            document.getElementById("Mun").disabled = false;
+            document.getElementById("mul").disabled = false;
+            document.getElementById("Div").disabled = false;                              
+            textNum.value = textNum.value +"4";                
+        }
+        function add5()
+        {  
+            document.getElementById("Sum").disabled = false;
+            document.getElementById("Mun").disabled = false;
+            document.getElementById("mul").disabled = false;
+            document.getElementById("Div").disabled = false;                                        
+            textNum.value = textNum.value +"5";                
+        }
+        function add6()
+        {  
+            document.getElementById("Sum").disabled = false; 
+            document.getElementById("Mun").disabled = false;
+            document.getElementById("mul").disabled = false;
+            document.getElementById("Div").disabled = false;                                       
+            textNum.value = textNum.value +"6";                
+        }
+        function add7()
+        {  
+            document.getElementById("Sum").disabled = false;
+            document.getElementById("Mun").disabled = false;
+            document.getElementById("mul").disabled = false;
+            document.getElementById("Div").disabled = false;                                        
+            textNum.value = textNum.value +"7";                
+        }
+        function add8()
+        {  
+            document.getElementById("Sum").disabled = false;
+            document.getElementById("Mun").disabled = false;
+            document.getElementById("mul").disabled = false;
+            document.getElementById("Div").disabled = false;                                        
+            textNum.value = textNum.value +"8";                
+        }
+        function add9()
+        {           
+            document.getElementById("Sum").disabled = false;
+            document.getElementById("Mun").disabled = false;
+            document.getElementById("mul").disabled = false;
+            document.getElementById("Div").disabled = false;                      
+            textNum.value = textNum.value +"9";                
+        }
+        function add0()
+        {           
+            document.getElementById("Sum").disabled = false;
+            document.getElementById("Mun").disabled = false; 
+            document.getElementById("mul").disabled = false;
+            document.getElementById("Div").disabled = false;                   
+            textNum.value = textNum.value +"0";                
+        }
+        //
+       function addpont(){
+            document.getElementById("Num.").disabled = true;
+            document.getElementById("Sum").disabled = false;
+            document.getElementById("Mun").disabled = false;  
+            document.getElementById("mul").disabled = false; 
+            document.getElementById("Div").disabled = false;      
+            textNum.value = textNum.value +".";
+       }
+        //
+        function addSum()
+        {
+            document.getElementById("Num.").disabled = false;
+            document.getElementById("Sum").disabled = true;
+            document.getElementById("Mun").disabled = true;
+            document.getElementById("mul").disabled = true;
+            document.getElementById("Div").disabled = true;
+            textNum.value = textNum.value +"+";
+        }
+        function addMun()
+        {
+            document.getElementById("Num.").disabled = false;
+            document.getElementById("Sum").disabled = true;
+            document.getElementById("Mun").disabled = true;
+            document.getElementById("mul").disabled = true;
+            document.getElementById("Div").disabled = true;
+            textNum.value = textNum.value +"-";
+
+        }
+        function addmul()
+        {
+            document.getElementById("Num.").disabled = false;
+            document.getElementById("Sum").disabled = true;
+            document.getElementById("Mun").disabled = true;
+            document.getElementById("mul").disabled = true;
+            document.getElementById("Div").disabled = true;
+            textNum.value = textNum.value +"*";
+
+        }
+        function addDiv()
+        {
+            document.getElementById("Num.").disabled = false;
+            document.getElementById("Sum").disabled = true;
+            document.getElementById("Mun").disabled = true;
+            document.getElementById("mul").disabled = true;
+            document.getElementById("Div").disabled = true;
+            textNum.value = textNum.value +"/";
+
+        }
+        function Eq()
+        {
+            document.getElementById("Num.").disabled = false;
+            document.getElementById("Sum").disabled = false;
+            document.getElementById("Mun").disabled = false;
+            document.getElementById("mul").disabled = false;
+            document.getElementById("Div").disabled = false;
+            try{
+           // alert(eval(textNum.value));    
+            textNum.value = "Hello world"; 
+            }
+            catch{
+                alert("F*** you");
+                textNum.value = eval(textNum.ariaValueNow);
+            }
+        } 
+     </script>
+     
+    
+   
+</body>
+</html>
